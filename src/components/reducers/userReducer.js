@@ -3,7 +3,7 @@ import { USER_ADDED } from "../actions/action-types/cart-actions";
 const initialState = {
   user: {
     name: "Sai",
-    email: "saisseru@gmail.com",
+    email: "",
   },
 };
 export default function(state = initialState, action) {
@@ -11,7 +11,7 @@ export default function(state = initialState, action) {
     case USER_ADDED:
       return {
         ...state,
-        user: action.payload,
+        user: { ...action.user },
       };
     default:
       return state;

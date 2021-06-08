@@ -22,6 +22,9 @@ class Cart extends Component {
   handleSubtractQuantity = (id) => {
     this.props.subtractQuantity(id);
   };
+  componentDidMount() {
+    console.log(this.props.user.user);
+  }
   render() {
     let addedItems = this.props.items.length ? (
       this.props.items.map((item) => {

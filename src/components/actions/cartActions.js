@@ -39,6 +39,6 @@ export const addQuantity = (id) => {
 export const userAdd = (user) => {
   return {
     type: USER_ADDED,
-    user,
+    user: user,
   };
 };

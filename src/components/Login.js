@@ -36,6 +36,7 @@ class Login extends Component {
       name: this.state.name,
       email: this.state.email,
     };
+    console.log(user)
     this.props.userAdd(user); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
     this.props.history.push({
       pathname: "/home",
